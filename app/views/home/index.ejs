@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8"/>
+			<title>Relatorios</title>
+		</head>
+	<body>
+
+		<h1>ids de entidade</h1>
+
+		<!-- Criando tabela para armazenar os valores recuperados do BD -->
+
+		<table>
+			<tr>
+				<td><b>ID do chamado</b></td>
+				<td><b>Name<b></td>
+				<td><b>Tempo para solução</b></td>
+			</tr>
+
+		<!-- Adicionando código JS para tornar o conteúdo das tabelas dinâmico -->
+
+		<% for(var i = 0; i < infos.length; i++){ %>
+			<tr>
+				<td><%= infos[i].ID_do_Chamado %></td>
+				<td><%= infos[i].Titulo_do_Chamado %></td>
+				<td><%= infos[i].tempo_de_resolucao_do_chamado %></td>
+			</tr>
+		<% } %>
+		</table>
+	</body>
